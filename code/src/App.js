@@ -61,9 +61,9 @@ function App() {
 
         <Routes>
             
-          <Route path='/home' element={<Home setLogedIn={setLogedIn}/>}></Route>
+          <Route path='/' element={<Home setLogedIn={setLogedIn}/>}></Route>
           <Route path='/register' element={<Register />}></Route>
-          </Routes> 
+        </Routes> 
 
               
         )

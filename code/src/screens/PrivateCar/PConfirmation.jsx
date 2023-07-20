@@ -10,7 +10,7 @@ const PConfirmation = () => {
             <div class="alert alert-success text-end" role="alert">
                 <p className='text-start'>We have recieved your payment. 
                 Thank you </p>
-                <Link to="/personalDetails">
+                <Link to="/sellInsurance">
                     <button className='btn btn-primary'>Home</button>
                 </Link>
             </div>
