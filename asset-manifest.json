@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/AssanOne/static/css/main.c809bdf1.css",
-    "main.js": "/AssanOne/static/js/main.0228b5e8.js",
+    "main.js": "/AssanOne/static/js/main.2b4e4c43.js",
     "static/media/ASSANONELOGO.png": "/AssanOne/static/media/ASSANONELOGO.f635aeed214fe6511dd3.png",
     "static/media/Homepageillustration.png": "/AssanOne/static/media/Homepageillustration.c6389bae41d6d1fcbd22.png",
     "static/media/prospects1.png": "/AssanOne/static/media/prospects1.0d2ff26309915bbeb112.png",
@@ -21,10 +21,10 @@
     "static/media/Leads.svg": "/AssanOne/static/media/Leads.0d7b349b6412f23411bc4bb5e3753e02.svg",
     "static/media/Dashboard.svg": "/AssanOne/static/media/Dashboard.f5dcbfbc24ea967c125a0784366e657d.svg",
     "main.c809bdf1.css.map": "/AssanOne/static/css/main.c809bdf1.css.map",
-    "main.0228b5e8.js.map": "/AssanOne/static/js/main.0228b5e8.js.map"
+    "main.2b4e4c43.js.map": "/AssanOne/static/js/main.2b4e4c43.js.map"
   },
   "entrypoints": [
     "static/css/main.c809bdf1.css",
-    "static/js/main.0228b5e8.js"
+    "static/js/main.2b4e4c43.js"
   ]
 }
