@@ -158,9 +158,4 @@ const checkMobile = async(req, response) => {
   }
 }
 
-
-
-
-
 module.exports = {registerUser,login, logout, checkMobileNumberExists, getUserDetails, checkMobile}
-

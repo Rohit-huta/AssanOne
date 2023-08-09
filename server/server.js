@@ -8,6 +8,7 @@ const connect = require("./databse/conn.js");
 
 
 const userRoute = require ("./api/user/route.js");
+const customerDetailsRouter = require('./api/customerDetails/route.js')
 
 const app = express();
 
@@ -29,6 +30,7 @@ app.get("/", (req, res) => {
 // api routes
 // app.use("/api", router);
 app.use("/api", userRoute);
+app.use("/api", customerDetailsRouter);
 
 // Start server only when we have valid connection
 connect()
