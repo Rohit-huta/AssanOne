@@ -17,7 +17,6 @@ const customerDetailsPost = async (req, res) => {
       gender,
       relation,
     } = req.body;
-
     const newCustomerDetails = new CustomerDetails({
         title,
         full_name,
@@ -33,9 +32,16 @@ const customerDetailsPost = async (req, res) => {
         gender,
         relation,
     });
-    const savedCustomerDetails = await newCustomerDetails.save();
+
+    console.log(newCustomerDetails)
+    
+    const savedCustomerDetails
+     = await newCustomerDetails.save();
+
+    console.log(6)
 
     if (!savedCustomerDetails) {
+      console.log("5")
       return res.status(400).json({
         message: "Error saving customer details, Please try again!",
       });
@@ -46,6 +52,7 @@ const customerDetailsPost = async (req, res) => {
       Customer_details: savedCustomerDetails,
     });
   } catch (error) {
+    console.log(error.message)
     return res.status(500).json({
       message: "Something went wrong, Please try again",
       error: error.message,

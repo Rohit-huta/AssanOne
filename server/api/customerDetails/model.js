@@ -1,5 +1,4 @@
 const mongoose = require("mongoose");
-const jwt = require("jsonwebtoken");
 const customerDetailsSceham = new mongoose.Schema(
   {
     title: {
@@ -23,10 +22,12 @@ const customerDetailsSceham = new mongoose.Schema(
     address: {
       type: String,
       required: true,
+      default: "",
     },
     pincode: {
       type: Number,
       required: true,
+      default: 0,
     },
     city: {
       type: String,
@@ -35,14 +36,17 @@ const customerDetailsSceham = new mongoose.Schema(
     state: {
       type: String,
       required: true,
+      default: "",
     },
     occupation: {
       type: String,
       required: true,
+      default: "",
     },
     martialStatus: {
       type: String,
       required: true,
+      default: "",
     },
     sumAssured: {
       type: Number,
@@ -61,7 +65,7 @@ const customerDetailsSceham = new mongoose.Schema(
 );
 
 const CustomerDetails = new mongoose.model(
-  "customerDetails",
+  "customerdetails",
   customerDetailsSceham
 );
 

@@ -6,13 +6,19 @@ import { postDetailsOfCustomer } from "../../redux/detailsOfCustomerSlice";
 const DetailsOfCustomer = () => {
   const [title, setTitle] = useState("");
   const [fullName, setFullName] = useState("");
-  const [mobileNo, setMobileNo] = useState(null);
+  const [mobileNo, setMobileNo] = useState("");
   const [city, setCity] = useState("");
-  const [sumAssured, setSumAssured] = useState(null);
+  const [sumAssured, setSumAssured] = useState("");
   const [gender, setGender] = useState("");
   const [relation, setRelation] = useState("");
   const [dateOfBirth, setDateOfBirth] = useState("");
-  const [noOfChildren, setNoOfChildren] = useState(null);
+  const [noOfChildren, setNoOfChildren] = useState("");
+  const [address, setAddress] = useState("");
+  const [state, setState] = useState("");
+  const [pincode, setPincode] = useState("");
+  const [occupation, setOccupation] = useState("");
+  const [martialStatus, setMartialStatus] = useState("");
+
 
   const { loading, success, error } = useSelector((state) => state);
 
@@ -23,15 +29,19 @@ const DetailsOfCustomer = () => {
     const newData = {
       title: title,
       full_name: fullName,
-      mobile: mobileNo,
+      mobile: Number(mobileNo),
+      address: address,
       city: city,
-      sumAssured: sumAssured,
+      state: state,
+      pincode: Number(pincode),
+      occupation: occupation,
+      martialStatus: martialStatus,
+      sumAssured: Number(sumAssured),
       gender: gender,
       relation: relation,
       dateOfBirth: dateOfBirth,
-      noOfChildren,
+      noOfChildren: Number(noOfChildren),
     };
-    console.log(newData);
     dispatch(postDetailsOfCustomer(newData));
   };
 
@@ -101,11 +111,44 @@ const DetailsOfCustomer = () => {
             <input
               type="text"
               className="form-control"
+              placeholder="Address"
+              aria-label="emailid"
+              aria-describedby="basic-addon2"
+              value={address}
+              onChange={(e) => setAddress(e.target.value)}
+            />
+          </div>
+          <div className="col">
+            <input
+              type="text"
+              className="form-control"
               placeholder="City"
               aria-label="emailid"
               aria-describedby="basic-addon2"
               value={city}
               onChange={(e) => setCity(e.target.value)}
+            />
+          </div>
+          <div className="col">
+            <input
+              type="text"
+              className="form-control"
+              placeholder="State"
+              aria-label="emailid"
+              aria-describedby="basic-addon2"
+              value={state}
+              onChange={(e) => setState(e.target.value)}
+            />
+          </div>
+          <div className="col">
+            <input
+              type="text"
+              className="form-control"
+              placeholder="Pincode"
+              aria-label="emailid"
+              aria-describedby="basic-addon2"
+              value={pincode}
+              onChange={(e) => setPincode(e.target.value)}
             />
           </div>
           <div className="col">
@@ -178,12 +221,39 @@ const DetailsOfCustomer = () => {
             <input
               type="text"
               className="form-control"
+              placeholder="Occupation"
+              aria-label="emailid"
+              aria-describedby="basic-addon2"
+              value={occupation}
+              onChange={(e) => {
+                setOccupation(e.target.value);
+              }}
+            />
+          </div>
+
+          <div className="col">
+            <input
+              type="text"
+              className="form-control"
               placeholder="Relation"
               aria-label="emailid"
               aria-describedby="basic-addon2"
               value={relation}
               onChange={(e) => {
                 setRelation(e.target.value);
+              }}
+            />
+          </div>
+          <div className="col">
+            <input
+              type="text"
+              className="form-control"
+              placeholder="Relation"
+              aria-label="emailid"
+              aria-describedby="basic-addon2"
+              value={martialStatus}
+              onChange={(e) => {
+                setMartialStatus(e.target.value);
               }}
             />
           </div>
